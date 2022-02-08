@@ -1372,7 +1372,7 @@ Function Invoke-TwoTierSubCaInstall {
         } Else {
             $S3BucketUrl = "$S3CRLBucketName.s3-$BucketRegion.amazonaws.com"
         }
-        $URL = "URL=http://$S3BucketUrl/SubCa/cps.txt"
+        $URL = "URL=http://$S3BucketUrl/$CompName/cps.txt"
 
         Write-Output 'Copying cps.txt to S3 bucket'
         Try {
